@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="歡迎填寫聯絡表單，我們將盡快與您聯繫。">
+  <meta name="theme-color" content="#2457d6">
   <title>聯絡我們｜需求諮詢</title>
 
   <style>
@@ -60,7 +61,7 @@
       font-size: 21px;
       font-weight: 800;
       text-decoration: none;
-      letter-spacing: 0.5px;
+      letter-spacing: .5px;
     }
 
     .nav-link {
@@ -112,11 +113,11 @@
 
     .layout {
       display: grid;
-      grid-template-columns: 0.8fr 1.4fr;
+      grid-template-columns: .8fr 1.4fr;
       background: white;
       border-radius: 22px;
       overflow: hidden;
-      box-shadow: 0 18px 55px rgba(27, 52, 100, .12);
+      box-shadow: 0 18px 55px rgba(27,52,100,.12);
     }
 
     .info {
@@ -149,6 +150,10 @@
       margin-top: 5px;
       font-size: 15px;
       overflow-wrap: anywhere;
+    }
+
+    .info-value a {
+      text-decoration: none;
     }
 
     .form-panel {
@@ -277,7 +282,6 @@
       background: #fff;
     }
 
-    /* 隱藏的防垃圾欄位 */
     .honeypot {
       position: absolute;
       left: -9999px;
@@ -333,6 +337,7 @@
 </head>
 
 <body>
+
   <header class="navbar">
     <div class="nav-inner">
       <a class="brand" href="./">CONTACT US</a>
@@ -361,9 +366,11 @@
 
         <div class="info-item">
           <div class="info-label">EMAIL</div>
-       <div class="info-value">
-  michellelo2003@gmail.com
-</div>
+          <div class="info-value">
+            <a href="mailto:michellelo2003@gmail.com">
+              michellelo2003@gmail.com
+            </a>
+          </div>
         </div>
 
         <div class="info-item">
@@ -378,17 +385,20 @@
       </aside>
 
       <section class="form-panel" id="contact-form">
+
         <h2>填寫聯絡表單</h2>
+
         <p class="form-intro">
           請填寫以下資料，標示
           <span class="required">*</span>
           的欄位為必填。
         </p>
 
-      <form
-  action="https://formspree.io/f/mkjjejrk"
-  method="POST"
->
+        <form
+          action="https://formspree.io/f/mkjjejrk"
+          method="POST"
+        >
+
           <!-- 信件主旨 -->
           <input
             type="hidden"
@@ -396,21 +406,21 @@
             value="網站收到新的聯絡表單"
           >
 
-          <!-- 使用表格格式呈現信件 -->
+          <!-- 信件格式 -->
           <input
             type="hidden"
             name="_template"
             value="table"
           >
 
-          <!-- 記錄表單來源網址 -->
+          <!-- 表單來源 -->
           <input
-  type="hidden"
-  name="_url"
-  value="https://61213272-svg.github.io/my-contact-website/"
->
+            type="hidden"
+            name="_url"
+            value="https://61213272-svg.github.io/my-contact-website/"
+          >
 
-          <!-- 防止機器人亂填 -->
+          <!-- 防止機器人 -->
           <div class="honeypot" aria-hidden="true">
             <label for="website">請勿填寫此欄位</label>
             <input
@@ -423,6 +433,7 @@
           </div>
 
           <div class="form-grid">
+
             <div class="field">
               <label for="name">
                 姓名 <span class="required">*</span>
@@ -513,6 +524,7 @@
                 </span>
               </label>
             </div>
+
           </div>
 
           <button class="submit-btn" type="submit">
@@ -522,6 +534,7 @@
           <p class="note">
             請確認資料正確後再送出。
           </p>
+
         </form>
       </section>
 
@@ -531,5 +544,6 @@
   <footer class="footer">
     © 2026 聯絡我們｜All Rights Reserved.
   </footer>
+
 </body>
 </html>
